@@ -1532,7 +1532,7 @@ function CFAHub:CreateWindow(title, gameName, intro)
                 local SliderElements = {}
 
                 function SliderElements:Change(tochange)
-                    SliderPercent.Size = UDim2.new(((tochange or 0) / Max_Value), 0, 1, 0)
+                    SliderPercent.Size = UDim2.new(((tochange or 0) / Max_Value), 0.1, 1, 0.1)
 					SilderNumber.Text = tostring(tochange and math.floor((tochange / Max_Value) * (Max_Value - Min_Value) + Min_Value) or 0)
 					pcall(callback, tochange)
 				end
