@@ -18,7 +18,7 @@ local Input = game:GetService("UserInputService")
 local Run = game:GetService("RunService")
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
-local CoreGui = game:GetService("CoreGui")
+local CoreGui = game:GetService("PlayerGui")
 local HttpService = game:GetService("HttpService")
 local ms = Player:GetMouse()
 
