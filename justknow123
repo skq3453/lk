@@ -1504,10 +1504,10 @@ function CFAHub:CreateWindow(title, gameName, intro)
 							0
 						)
                     Utility:TweenObject(SliderPercent, {Size = pos}, 0.25)
-					local value = math.floor(((pos.X.Scale * Max_Value) / Max_Value) * (Max_Value - Min_Value) + Min_Value)
-					SilderNumber.Text = tostring(value)
-					pcall(callback, value)
-				end
+                    local value = Min_Value + ((pos.X.Scale * (Max_Value - Min_Value)) // 0.1) * 0.1
+                    SilderNumber.Text = string.format("%.1f", value)
+                    pcall(callback, value)
+                end
 
                 SliderDrag.InputBegan:Connect(function(input)
 					if input.UserInputType == Enum.UserInputType.MouseButton1 then
